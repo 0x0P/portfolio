@@ -1,0 +1,18 @@
+.button {
+  background-color: #3c50ff; /* Green */
+  border: none;
+  border-radius: 0.7rem;
+  color: white;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.7rem;
+  width: fit-content;
+  transition: 0.2s;
+}
+
+.button:active {
+  transform: scale(0.95);
+  filter: brightness(0.9);
+}
