@@ -1,4 +1,5 @@
 import Nav from "@/component/nav";
+import "aos/dist/aos.css";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 

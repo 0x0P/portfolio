@@ -1,11 +1,10 @@
 "use client";
-import "aos/dist/aos.css";
 import styles from "@/styles/about.module.css";
 import Button from "@/component/button";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 
-export default function Home() {
+export default function About() {
   useEffect(() => {
     AOS.init();
     const aosAnimation = document.querySelectorAll("[data-aos]");
