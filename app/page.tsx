@@ -2,11 +2,9 @@
 import styles from "@/styles/page.module.css";
 import Button from "@/component/button";
 import Link from "next/link";
-import IG from "@/public/instagram.svg";
-import Github from "@/public/github.svg";
-import Email from "@/public/email.svg";
 import { useEffect } from "react";
 import AOS from "aos";
+import Contact from "./contact/page";
 
 export default function Home() {
   useEffect(() => {
@@ -41,7 +39,7 @@ export default function Home() {
             </h1>
           </div>
           <Link href="/about">
-            <Button bg="#000" color="#FFD600" text={"아직 공사중이에요"} />
+            <Button bg="var(--construction)" color="var(--constructionText)" text={"아직 공사중이에요"} data-aos="fade-right" />
           </Link>
         </div>
       </div>
@@ -59,36 +57,11 @@ export default function Home() {
             </h1>
           </div>
           <Link href="/portfolio">
-            <Button bg="#000" color="#FFD600" text={"아직 공사중이에요"} data-aos="fade-right" />
+            <Button bg="var(--construction)" color="var(--constructionText)" text={"아직 공사중이에요"} data-aos="fade-right" />
           </Link>
         </div>
       </div>
-      <div className={styles.container}>
-        <div>
-          <div className={styles.textBox}>
-            <h1 className={styles.bigText} data-aos="fade-right">
-              당신의 연락
-            </h1>
-            <h1 className={styles.bigText} data-aos="fade-right">
-              기다리고있어요
-            </h1>
-            <h1 className={styles.aboutText} data-aos="fade-right">
-              #우리_친해져요
-            </h1>
-          </div>
-          <div className={styles.contacts}>
-            <Link href="https://www.instagram.com/standardlister/">
-              <IG className={styles.contact} data-aos="fade-up" />
-            </Link>
-            <Link href="https://github.com/0x0P/">
-              <Github className={styles.contactBackground} data-aos="fade-up" data-aos-delay="50" />
-            </Link>
-            <Link href="mailto::0x0p@cream.ink">
-              <Email className={styles.contactBackground} data-aos="fade-up" data-aos-delay="100" />
-            </Link>
-          </div>
-        </div>
-      </div>
+      <Contact />
     </div>
   );
 }
