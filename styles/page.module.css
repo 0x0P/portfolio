@@ -26,24 +26,28 @@
 .bigText {
   font-size: 4vmax;
   font-weight: 900;
+  color: var(--text);
 }
 
 .aboutText {
   font-size: 2vmax;
   font-weight: 100;
+  color: var(--text);
 }
+
 .contact {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.5rem;
 }
+
 .contactBackground {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: black;
+  background-color: var(--text);
   border-radius: 0.5rem;
   padding: 0.3rem;
-  fill: #fff;
+  fill: var(--background);
 }
 
 .contacts {

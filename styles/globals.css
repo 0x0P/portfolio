@@ -3,11 +3,17 @@
 :root {
   --background: #fff;
   --text: #000;
+  --construction: #000;
+  --constructionText: #ffd600;
+  --hover: #00000020;
 }
 
-:root[theme="dark"] {
-  --background: #fff;
-  --text: #000;
+:root[data-theme="dark"] {
+  --background: #000;
+  --text: #fff;
+  --construction: #ffd600;
+  --constructionText: #000;
+  --hover: #ffffff20;
 }
 
 body {
@@ -33,4 +39,10 @@ a {
 .active {
   width: 100vw !important;
   height: 100vh !important;
+  padding: 5rem !important;
+}
+
+.active div {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
