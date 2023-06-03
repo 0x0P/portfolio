@@ -4,7 +4,7 @@ import Button from "@/component/button";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 
-export default function About() {
+export default function Home() {
   useEffect(() => {
     AOS.init();
     const aosAnimation = document.querySelectorAll("[data-aos]");
@@ -30,10 +30,10 @@ export default function About() {
           </h1>
         </div>
         <div className={styles.container}>
-          <h1 className={styles.bigText} data-aos="fade-up">
+          <h1 className={styles.bigText} data-aos="fade-right">
             저는
           </h1>
-          <div className={styles.textBox}>
+          <div className={styles.textBox} data-aos="fade-right">
             <div className={styles.scrollContainer}>
               <div className={styles.scroll} />
             </div>
@@ -41,7 +41,9 @@ export default function About() {
             <h1 className={styles.scrollText}>백엔드</h1>
             <h1 className={styles.scrollText}>중학생 </h1>
           </div>
-          <h1 className={styles.bigText}>개발자 입니다</h1>
+          <h1 className={styles.bigText} data-aos="fade-right">
+            개발자 입니다
+          </h1>
         </div>
       </div>
     </div>
