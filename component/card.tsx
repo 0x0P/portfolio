@@ -9,7 +9,7 @@ export default function Card({ title, text, src, link, number }: { title: string
     }
   }
   return (
-    <div className={styles.card} data-aos="fade-up" data-aos-delay={number * 100 + 100}>
+    <div className={styles.card} data-aos="fade-up" data-aos-delay={number * 50 + 100}>
       <div className={styles.cardTop}>
         <h1 className={styles.cardTitle}>{title}</h1>
         <h1 className={styles.cardText}>{text}</h1>
