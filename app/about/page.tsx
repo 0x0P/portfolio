@@ -1,8 +1,8 @@
 "use client";
 import styles from "@/styles/about.module.css";
-import Button from "@/component/button";
-import { useEffect, useRef, useState } from "react";
+import { ReactNode, use, useEffect, useState } from "react";
 import AOS from "aos";
+import Repo from "@/component/repo";
 
 export default function Home() {
   useEffect(() => {
@@ -21,6 +21,7 @@ export default function Home() {
       observer.observe(aosObject);
     });
   });
+
   return (
     <div>
       <div className={styles.containers}>
@@ -45,7 +46,53 @@ export default function Home() {
             개발자 입니다
           </h1>
         </div>
+        <div className={styles.halfContainer}>
+          <div className={styles.leftContent}>
+            <div className={styles.halfContent}>
+              <h1 className={styles.bigText} data-aos="fade-right">
+                다양한것을
+              </h1>
+              <h1 className={styles.bigText} data-aos="fade-right">
+                개발하고
+              </h1>
+            </div>
+          </div>
+          <div data-aos="fade-up" className={styles.rightContent}>
+            <div className={styles.bigText}>ㅁㄴㅇㄹ</div>
+          </div>
+        </div>
+        <div className={styles.halfContainer}>
+          <div className={styles.leftContent}>
+            <div className={styles.halfContent}>
+              <h1 className={styles.bigText} data-aos="fade-right">
+                새로운 도전을
+              </h1>
+              <h1 className={styles.bigText} data-aos="fade-right">
+                이어나가는
+              </h1>
+            </div>
+          </div>
+          <div data-aos="fade-up" className={styles.rightContent}>
+            {}
+          </div>
+        </div>
+        <div className={styles.container}>
+          <h1 className={styles.bigText} data-aos="fade-up">
+            저는
+          </h1>
+          <h1 className={styles.bigText} data-aos="fade-up">
+            김민겸 입니다
+          </h1>
+          <h1 className={styles.aboutText} data-aos="fade-up">
+            #낭만을_즐기는_개발자
+          </h1>
+        </div>
       </div>
     </div>
   );
+}
+
+export async function getData() {
+  const res = await fetch("https://api.github.com/users/0x0P/repos", { cache: "no-cache" });
+  return res.json();
 }
