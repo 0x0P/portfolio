@@ -41,12 +41,15 @@ export default function Contact() {
         <div className={styles.contacts}>
           <Link href="https://www.instagram.com/standardlister/">
             <IG className={styles.contact} data-aos="fade-up" />
+            <h1 className={styles.tooltip}>standardlister</h1>
           </Link>
           <Link href="https://github.com/0x0P/">
             <Github className={styles.contactBackground} data-aos="fade-up" data-aos-delay="50" />
+            <h1 className={styles.tooltip}>0x0P</h1>
           </Link>
           <Link href="mailto::0x0p@cream.ink">
             <Email className={styles.contactBackground} data-aos="fade-up" data-aos-delay="100" />
+            <h1 className={styles.tooltip}>0x0p@cream.ink</h1>
           </Link>
         </div>
       </div>

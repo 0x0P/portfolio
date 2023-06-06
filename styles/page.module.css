@@ -68,3 +68,18 @@
   border-radius: 0.5rem;
   border: 1px solid black;
 }
+
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index: 1;
+}
+
+.contact:hover .tooltip {
+  visibility: visible;
+}
