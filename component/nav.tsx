@@ -6,7 +6,7 @@ export default function Nav() {
   useEffect(() => {
     const nav = document.querySelector(`.${styles.container}`);
     nav?.addEventListener("click", (e) => {
-      if (e.target === nav) {
+      if (e.target === nav || e.target === nav?.lastChild) {
         nav?.classList.toggle("active");
       } else {
         nav?.classList.remove("active");
@@ -33,6 +33,7 @@ export default function Nav() {
           <h1 className={styles.navItem}>블로그</h1>
         </Link>
       </div>
+      <span className={`material-symbols-outlined`}>menu</span>
     </div>
   );
 }
