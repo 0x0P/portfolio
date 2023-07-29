@@ -130,7 +130,7 @@
   justify-content: center;
   align-items: flex-end;
   padding: 5rem;
-  background-color: #ffe1c5;
+  background-color: #000000;
   color: black !important;
 }
 .halfContent {
@@ -141,4 +141,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.markedOne {
+  background: linear-gradient(45deg, #ff009c, #3c00ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.markedTwo {
+  background: linear-gradient(45deg, #63ff84, #0087ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
