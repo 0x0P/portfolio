@@ -5,6 +5,7 @@ import AOS from "aos";
 import Repo from "@/component/repo";
 
 export default function Home() {
+  const data = use(getData());
   useEffect(() => {
     AOS.init();
     const aosAnimation = document.querySelectorAll("[data-aos]");
@@ -50,7 +51,7 @@ export default function Home() {
           <div className={styles.leftContent}>
             <div className={styles.halfContent}>
               <h1 className={styles.bigText} data-aos="fade-right">
-                다양한것을
+                <span className={styles.markedOne}>다양한것</span>들을
               </h1>
               <h1 className={styles.bigText} data-aos="fade-right">
                 개발하고
@@ -58,14 +59,16 @@ export default function Home() {
             </div>
           </div>
           <div data-aos="fade-up" className={styles.rightContent}>
-            <div className={styles.bigText}>ㅁㄴㅇㄹ</div>
+            {data.map((repo: any, index: number) => {
+              <Repo title={repo.name} text={repo.description} link={repo.html_url} key={index} number={index} />;
+            })}
           </div>
         </div>
         <div className={styles.halfContainer}>
           <div className={styles.leftContent}>
             <div className={styles.halfContent}>
               <h1 className={styles.bigText} data-aos="fade-right">
-                새로운 도전을
+                <span className={styles.markedTwo}>새로운도전</span>을
               </h1>
               <h1 className={styles.bigText} data-aos="fade-right">
                 이어나가는
